@@ -1,0 +1,53 @@
+{
+  "name": "mtu-webcams",
+  "version": "0.1.0",
+  "description": "📷 🚨 an easy-to-use API for downloading and streaming from public Michigan Tech webcams",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "test": "xo",
+    "document": "npx documentation readme index.js --section='📖 Docs'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codetheweb/mtu-webcams.git"
+  },
+  "keywords": [
+    "📷",
+    "camera",
+    "webcam",
+    "stream",
+    "timelapse",
+    "recording",
+    "record",
+    "mtu",
+    "michigan tech"
+  ],
+  "author": "Max Isom <hi@maxisom.me> (https://maxisom.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codetheweb/mtu-webcams/issues"
+  },
+  "homepage": "https://github.com/codetheweb/mtu-webcams/issues#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "got": "^9.6.0"
+  },
+  "xo": {
+    "space": true
+  },
+  "devDependencies": {
+    "documentation": "^12.1.1",
+    "husky": "^3.0.2",
+    "xo": "^0.24.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
+}
