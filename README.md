@@ -51,6 +51,7 @@ const cams = new Webcams();
 
 -   [Webcams](#webcams)
     -   [Parameters](#parameters)
+    -   [init](#init)
     -   [getAll](#getall)
     -   [byId](#byid)
         -   [Parameters](#parameters-1)
@@ -77,11 +78,18 @@ Main cameras class.
 -   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**  (optional, default `{}`)
     -   `options.ffmpegPath` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** path to local FFMPEG binary
 
+#### init
+
+Scrape Michigan Tech's website to
+retrieve all published webcams.
+
+Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Camera](#camera)>** discovered cameras
+
 #### getAll
 
 Get all cameras saved in instance.
 
-Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Camera](#camera)>**
+Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Camera](#camera)>** 
 
 #### byId
 
@@ -91,7 +99,7 @@ Gets camera by ID.
 
 -   `id` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** of camera
 
-Returns **[Camera](#camera)**
+Returns **[Camera](#camera)** 
 
 #### byName
 
@@ -101,7 +109,7 @@ Gets camera by name.
 
 -   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of camera
 
-Returns **[Camera](#camera)**
+Returns **[Camera](#camera)** 
 
 ### Camera
 
@@ -110,28 +118,28 @@ Main camera class.
 #### Parameters
 
 -   `$0` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**  (optional, default `{}`)
-    -   `$0.imageURL`
-    -   `$0.name`
-    -   `$0.description`
-    -   `$0.ffmpegPath`
+    -   `$0.imageURL`  
+    -   `$0.name`  
+    -   `$0.description`  
+    -   `$0.ffmpegPath`  
 
 #### getImageURL
 
 Returns the URL to a static snapshot.
 
-Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 #### streamImage
 
 Returns a stream of the latest static snapshot.
 
-Returns **[stream.Readable](https://nodejs.org/api/stream.html#stream_class_stream_readable)**
+Returns **[stream.Readable](https://nodejs.org/api/stream.html#stream_class_stream_readable)** 
 
 #### getVideoURL
 
 Returns the URL to a live `m3u8` playlist.
 
-Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 #### streamVideo
 
@@ -142,7 +150,7 @@ Returns a live video stream from the webcam.
 -   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**  (optional, default `{}`)
     -   `options.format` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** format specifier passed to FFMPEG (optional, default `'flv'`)
 
-Returns **[stream.Readable](https://nodejs.org/api/stream.html#stream_class_stream_readable)**
+Returns **[stream.Readable](https://nodejs.org/api/stream.html#stream_class_stream_readable)** 
 
 #### getRecordingURL
 
@@ -152,7 +160,7 @@ Returns the URL for a MP4 recording.
 
 -   `date` **[Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)** of recording
 
-Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 #### streamRecording
 
@@ -162,4 +170,4 @@ Returns a recording as a stream.
 
 -   `date` **[Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)** of recording to retrieve
 
-Returns **[stream.Readable](https://nodejs.org/api/stream.html#stream_class_stream_readable)**
+Returns **[stream.Readable](https://nodejs.org/api/stream.html#stream_class_stream_readable)** 

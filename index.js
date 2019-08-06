@@ -15,6 +15,11 @@ class Webcams {
     this.ffmpegPath = ffmpegPath;
   }
 
+  /**
+   * Scrape Michigan Tech's website to
+   * retrieve all published webcams.
+   * @returns {Array<Camera>} discovered cameras
+   */
   async init() {
     const page = await got('https://www.mtu.edu/webcams/');
     const $ = cheerio.load(page.body);
