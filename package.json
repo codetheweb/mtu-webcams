@@ -1,6 +1,6 @@
 {
   "name": "mtu-webcams",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "📷 🚨 an easy-to-use API for downloading and streaming from public Michigan Tech webcams",
   "main": "index.js",
   "files": [
